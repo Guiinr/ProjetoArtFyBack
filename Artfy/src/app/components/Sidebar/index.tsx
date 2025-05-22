@@ -71,7 +71,7 @@ const Sidebar = ({ isOpen, onClose, user }: SidebarProps) => {
             </div>
 
             <div className={styles.sidebarSection}>
-              <Link href="/my-address" className={styles.sidebarButton} onClick={onClose}>
+              <Link href="/admin" className={styles.sidebarButton} onClick={onClose}>
                 <RiHomeLine className={styles.sidebarIcon} />
                 Meu Endereço
               </Link>

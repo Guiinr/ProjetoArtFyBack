@@ -1,0 +1,464 @@
+/* Variáveis de cores baseadas no seu tema */
+.adminContainer {
+    --primary: #232637;
+    --primary-dark: #1a1d2b;
+    --secondary: #f9f9f9;
+    --accent: #4f46e5;
+    --accent-hover: #3a36c9;
+    --text: #555;
+    --text-light: #777;
+    --text-lighter: #999;
+    --border: #e1e1e1;
+    --border-light: #eee;
+    --success: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --info: #3b82f6;
+    --background: #f5f7fa;
+  }
+  
+  /* Reset e estilos base */
+  .adminContainer * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .adminContainer {
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .adminContainer a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Main Content */
+  .mainContent {
+    flex: 1;
+    margin-left: 250px;
+  }
+  
+  .adminHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .adminHeader h1 {
+    color: var(--primary);
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .userMenu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+  }
+  
+  .userAvatar {
+    font-size: 1.8rem;
+    color: var(--accent);
+  }
+  
+  .contentWrapper {
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+  
+  /* Stats Cards */
+  .statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .statCard {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .statCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .statInfo h3 {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .statInfo p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .statTrend {
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .up {
+    color: var(--success);
+  }
+  
+  .down {
+    color: var(--danger);
+  }
+  
+  .statIcon {
+    font-size: 2rem;
+    color: rgba(79, 70, 229, 0.2);
+  }
+  
+  /* Tabelas */
+  .activityTable {
+    margin-top: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  
+  .activityTable table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .activityTable th, 
+  .activityTable td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-light);
+  }
+  
+  .activityTable th {
+    background-color: #f8f9fa;
+    color: var(--text-light);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+  
+  .status {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .completed {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+  }
+  
+  .pending {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+  }
+  
+  .processing {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--info);
+  }
+  
+  /* Seções */
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionHeader h2 {
+    color: var(--primary);
+    font-size: 1.2rem;
+  }
+  
+  .viewAll {
+    color: var(--accent);
+    font-size: 0.9rem;
+  }
+  
+  /* Nova Seção: Gráficos */
+  .chartsSection {
+    margin-top: 2rem;
+  }
+  
+  .chartsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .chartCard {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .chartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .chartHeader h3 {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .chartValue {
+    font-weight: 600;
+    color: var(--primary);
+  }
+  
+  .chartContainer {
+    height: 250px;
+    position: relative;
+  }
+  
+  .chartPlaceholder {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f7fa;
+    border-radius: 4px;
+  }
+  
+  .chartPlaceholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .timeFilter {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .timeBtn {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--border);
+    background-color: white;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .timeBtn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  
+  .active {
+    background-color: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+  
+  /* Seção de Cadastro de Produto */
+  .productFormSection {
+    margin-top: 2rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .productForm {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup label {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+  
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea {
+    padding: 0.8rem;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    background-color: #fff;
+    transition: border-color 0.2s;
+  }
+  
+  .formGroup input:focus,
+  .formGroup select:focus,
+  .formGroup textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+  }
+  
+  .btnSubmit {
+    align-self: start;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .btnSubmit:hover {
+    background-color: var(--accent-hover);
+  }
+  
+  /* Seção de Produtos Cadastrados */
+  .registeredProductsSection {
+    margin-top: 2rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .productsTable {
+    margin-top: 1rem;
+    overflow-x: auto;
+  }
+  
+  .productsTable table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .productsTable th,
+  .productsTable td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 0.95rem;
+  }
+  
+  .productsTable th {
+    background-color: #f8f9fa;
+    text-transform: uppercase;
+    color: var(--text-light);
+    font-weight: 600;
+  }
+  
+  .actionBtn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    transition: background-color 0.2s;
+  }
+  
+  .edit {
+    background-color: var(--info);
+    color: white;
+  }
+  
+  .delete {
+    background-color: var(--danger);
+    color: white;
+  }
+  
+  .edit:hover {
+    background-color: #2563eb;
+  }
+  
+  .delete:hover {
+    background-color: #dc2626;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 992px) {
+    .chartsGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 80px;
+    }
+    
+    .sidebarHeader h2, 
+    .sidebarNav li span {
+      display: none;
+    }
+    
+    .sidebarNav li a {
+      justify-content: center;
+      padding: 0.8rem;
+    }
+    
+    .mainContent {
+      margin-left: 80px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .statsGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .adminHeader {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .sectionHeader {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .timeFilter {
+      width: 100%;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+    }
+  }
